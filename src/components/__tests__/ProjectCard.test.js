@@ -83,5 +83,5 @@ test('Renders project links', () => {
     const githubElement = screen.getByText(/GitHub/);
     const linkedinElement = screen.getByText(/LinkedIn/);
     expect(githubElement).toBeInTheDocument();
-    expect(githubElement).toBeInTheDocument();
+    expect(linkedinElement).toBeInTheDocument();
 });
