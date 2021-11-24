@@ -1,6 +1,7 @@
 import './styles/App.css';
 import Navigation from './components/Navigation'
 import AboutMe from './components/AboutMe'
+import Portfolio from './components/Portfolio';
 import Footer from './components/Footer'
 
 
@@ -10,7 +11,8 @@ function App() {
       {/* Link the bootstrap styling. */}
       
       <Navigation />
-      <AboutMe />
+      {/* <AboutMe /> */}
+      <Portfolio />
       <Footer />
     </div>
   );

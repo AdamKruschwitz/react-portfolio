@@ -1,6 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import ProjectCard from '../ProjectCard';
+import React from 'react'
+import ProjectCard from '../ProjectCard'
+import { Container } from 'react-bootstrap'
 
+// Importing project images
+// import gallery from '../../assets/images/3DGalleryScreenshot.PNG'
+// import quiz from '../../assets/images/CodingQuizScreenshot.PNG'
+// import weather from '../../assets/images/WeatherDashboardScreenshot.PNG'
+ 
 
 const projects = [
     {
@@ -15,7 +21,9 @@ const projects = [
         "deployed-link": "https://argibson02.github.io/3d-gallery-walk/",
         "github-link": "https://github.com/argibson02/3d-gallery-walk",
         "featured": true,
-        "text-color": "text-light"
+        "text-color": "text-light",
+        "key": 0,
+        // "image": gallery
     },
     {
         "title": "JavaScript Quiz",
@@ -29,7 +37,8 @@ const projects = [
         "deployed-link": "https://adamkruschwitz.github.io/code-quiz/",
         "github-link": "https://github.com/AdamKruschwitz/code-quiz",
         "featured": true,
-        "text-color": "text-dark"
+        "text-color": "text-dark",
+        "key": 1
     },
     {
         "title": "Weather Dashboard",
@@ -43,7 +52,8 @@ const projects = [
         "deployed-link": "https://adamkruschwitz.github.io/weather-dashboard/",
         "github-link": "https://github.com/AdamKruschwitz/weather-dashboard",
         "featured": true,
-        "text-color": "text-dark"
+        "text-color": "text-dark",
+        "key": 2
     },
     {
         "title": "Animates",
@@ -57,32 +67,21 @@ const projects = [
         "deployed-link": "https://peaceful-cliffs-69062.herokuapp.com/",
         "github-link": "https://github.com/amackenzie26/Animates",
         "featured": false,
-        "text-color": "text-dark"
+        "text-color": "text-dark",
+        "key": 3
     }
 ]
 
-test('Renders Project Card', () => {
-  render(<ProjectCard project={projects[0]} />);
-  const projectCardElement = screen.getByText(/3D Gallery/);
-  expect(projectCardElement).toBeInTheDocument();
-});
+function Portfolio() {
+    const projectsList = projects.map((project) => {
+        return <ProjectCard key={project.key} project={project} />
+    });
 
-test('Renders Project Title', () => {
-    render(<ProjectCard project={projects[0]} />);
-    const titleElement = screen.getByText(/3D Gallery/);
-    expect(titleElement).toBeInTheDocument();
-});
+    return (
+        <Container className="relaxed divided list">
+            { projectsList }
+        </Container>
+    )
+}
 
-test('Renders Project Description', () => {
-    render(<ProjectCard project={projects[0]} />);
-    const descriptionElement = screen.getByText(/A 3D Gallery viewer*Created by Adam Kruschwitz, Alex Gibson, and Henry Kam/);
-    expect(descriptionElement).toBeInTheDocument();
-});
-
-test('Renders project links', () => {
-    render(<ProjectCard project={projects[0]} />);
-    const githubElement = screen.getByText(/GitHub/);
-    const linkedinElement = screen.getByText(/LinkedIn/);
-    expect(githubElement).toBeInTheDocument();
-    expect(linkedinElement).toBeInTheDocument();
-});
+export default Portfolio

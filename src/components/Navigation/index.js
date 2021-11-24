@@ -12,7 +12,7 @@ function Navigation({}) {
                 <Nav.Link href="#aboutMe">About Me</Nav.Link>
                 <Nav.Link href="#portfolio">Portfolio</Nav.Link>
                 <Nav.Link href="#contact">Contact</Nav.Link>
-                <Button href="#resume">Download Resume</Button>{' '}
+                <Button href="#resume">Download Resume</Button>
             </Nav>
     </Navbar.Collapse>
   </Container>

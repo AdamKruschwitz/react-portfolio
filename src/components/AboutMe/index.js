@@ -1,5 +1,6 @@
 import React from 'react';
-import portrait from '../../assets/images/AdamKruschwitz.jpg'
+
+var portrait = `${process.env.PUBLIC_URL}/assets/images/AdamKruschwitz.jpg`;
 
 function AboutMe({}) {
     return (
