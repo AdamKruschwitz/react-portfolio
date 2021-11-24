@@ -1,6 +1,7 @@
 import './styles/App.css';
 import Navigation from './components/Navigation'
 import AboutMe from './components/AboutMe'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       
       <Navigation />
       <AboutMe />
+      <Footer />
     </div>
   );
 }
