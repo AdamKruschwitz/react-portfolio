@@ -72,13 +72,25 @@ const projects = [
     }
 ]
 
+const styles = {
+    project: {
+        height: "20%",
+        background: '#e8eaf6'
+    },
+    projects: {
+        height: "100%",
+        display: "flex",
+        flexWrap: "wrap"
+    }
+}
+
 function Portfolio() {
     const projectsList = projects.map((project) => {
-        return <ProjectCard key={project.key} project={project} />
+        return <ProjectCard key={project.key} project={project} style={styles.project} />
     });
 
     return (
-        <Container className="relaxed divided list">
+        <Container className="" style={styles.projects}>
             { projectsList }
         </Container>
     )
