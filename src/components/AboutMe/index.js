@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container  } from 'react-bootstrap';
 
 var portrait = `${process.env.PUBLIC_URL}/assets/images/AdamKruschwitz.jpg`;
 
 function AboutMe() {
     return (
-        <div>
+        <Container>
             <h2 className="display-2 p-4 d-block">About Me</h2>
             <div className="d-flex align-items-center flex-wrap pb-4">
                 <img className="rounded-circle col-12 col-lg-4 px-lg-4" src={ portrait } alt="Adam Kruschwitz looking happy in a sunny place." />
@@ -14,7 +15,7 @@ function AboutMe() {
                     <p className="fs-4">In my free time, I enjoy playing Magic the Gathering&trade;, designing and crocheting plush figures, and volunteering through mutual aid organizations in my community. I hope to bring the spirit of creativity and camaraderie I exercise through my hobbies into my workplace.</p>
                 </div>
             </div>
-        </div>
+        </Container>
     )
 }
 

@@ -13,8 +13,8 @@ import Portfolio from "../Portfolio"
 
 function MyContainer() {
     return (
-    
     <Router >
+        <div className="min-vh-100">
         <Navigation />
         <Routes>
             <Route path="/" element={<AboutMe />}>
@@ -27,6 +27,7 @@ function MyContainer() {
             </Route> */}
         </Routes>
         <Footer />
+        </div>
     </Router>
     
     )
