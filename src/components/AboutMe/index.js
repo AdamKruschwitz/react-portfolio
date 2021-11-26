@@ -2,7 +2,7 @@ import React from 'react';
 
 var portrait = `${process.env.PUBLIC_URL}/assets/images/AdamKruschwitz.jpg`;
 
-function AboutMe({}) {
+function AboutMe() {
     return (
         <div>
             <h2 className="display-2 p-4 d-block">About Me</h2>

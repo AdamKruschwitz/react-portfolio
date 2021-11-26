@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap'
 
-function Footer({}) {
+function Footer() {
     return (
         <Container fluid className="bg-dark text-light p-4 position-absolute bottom-0">
             <p>

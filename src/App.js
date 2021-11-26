@@ -1,19 +1,11 @@
 import './styles/App.css';
-import Navigation from './components/Navigation'
-import AboutMe from './components/AboutMe'
-import Portfolio from './components/Portfolio';
-import Footer from './components/Footer'
+import MyContainer from "./components/Container"
 
 
 function App() {
   return (
     <div className="App">
-      {/* Link the bootstrap styling. */}
-      
-      <Navigation />
-      {/* <AboutMe /> */}
-      <Portfolio />
-      <Footer />
+      <MyContainer />
     </div>
   );
 }
